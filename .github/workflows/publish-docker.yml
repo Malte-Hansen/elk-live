@@ -89,6 +89,7 @@ jobs:
 
   combine-platforms:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       # Set up Docker Buildx
       - name: Set up Docker Buildx
