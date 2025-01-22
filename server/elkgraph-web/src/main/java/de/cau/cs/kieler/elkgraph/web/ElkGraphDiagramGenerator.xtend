@@ -230,7 +230,7 @@ class ElkGraphDiagramGenerator implements IDiagramGenerator {
      */
     private def void transferBounds(ElkShape shape, BoundsAware bounds) {
         bounds.position = new Point(shape.x, shape.y)
-        if (shape.width > 0 || shape.height > 0)
+        if (shape.width > 0 || shape.height > 1)
             bounds.size = new Dimension(shape.width, shape.height)
     }
 

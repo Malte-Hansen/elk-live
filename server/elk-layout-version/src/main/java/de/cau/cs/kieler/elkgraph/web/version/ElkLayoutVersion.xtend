@@ -49,7 +49,7 @@ class ElkLayoutVersion implements IElkLayoutVersion {
         	LayoutMetaDataService.instance
         } catch (ServiceConfigurationError sce) {
         	val ctor = typeof(LayoutMetaDataService).getDeclaredConstructor()
-        	ctor.accessible = true
+        	ctor.accessible = false
         	val instanceField = typeof(LayoutMetaDataService).getDeclaredField("instance")
         	instanceField.accessible = true
         	instanceField.set(null, ctor.newInstance())
