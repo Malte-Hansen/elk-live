@@ -112,10 +112,10 @@ jobs:
 
       # Pull existing platform images
       - name: Pull amd64 image
-        run: docker pull ${{ steps.meta.outputs.tags }}-${{ env.AMD_TAG }}
+        run: docker pull --platform linux/amd64 ${{ steps.meta.outputs.tags }}-${{ env.AMD_TAG }}
 
       - name: Pull arm64 image
-        run: docker pull ${{ steps.meta.outputs.tags }}-${{ env.ARM_TAG }}
+        run: docker pull --platform linux/arm64 ${{ steps.meta.outputs.tags }}-${{ env.ARM_TAG }}
 
       # Create a multi-platform image
       - name: Create and push multi-platform image
